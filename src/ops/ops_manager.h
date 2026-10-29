@@ -354,7 +354,7 @@ public:
     void ExecuteCommand(const std::wstring& command, const std::wstring& path);
 
     // `wt.exe -d <dir>` on the ops worker thread. Compile-verified only.
-    void OpenTerminal(const std::wstring& dir);
+    void OpenTerminal(const std::wstring& dir, const std::wstring& program = {});
 
     // Start a console program (cmd.exe, powershell.exe, ...) with `dir` as its
     // working directory, on the open thread. wt.exe gets `-d <dir>` before args.
